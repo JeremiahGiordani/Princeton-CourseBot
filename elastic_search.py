@@ -1,5 +1,4 @@
 from elasticsearch import Elasticsearch
-import json
 import elastic_search_variables
 
 client = Elasticsearch(cloud_id=elastic_search_variables.get_cloud_id(), api_key=elastic_search_variables.get_api_key())
