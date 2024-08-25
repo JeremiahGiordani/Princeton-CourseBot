@@ -9,6 +9,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+# Path to your ChromeDriver (Replace with your path)
+chrome_driver_path = "/Users/jeremiahgiordani/Documents/chromedriver-mac-x64/chromedriver"
+
 def get_subject_codes():
     # URL of the course offerings page
     url = "https://registrar.princeton.edu/course-offerings"
@@ -50,7 +53,7 @@ def get_course_urls_selenium(subject_codes, term="1252"):
     chrome_options.add_argument("--disable-dev-shm-usage")
 
     # Set up the Selenium WebDriver
-    service = Service('/Users/jeremiahgiordani/Documents/chromedriver-mac-x64/chromedriver')  # Replace with your path to chromedriver
+    service = Service(chrome_driver_path)  # Replace with your path to chromedriver
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     total_departments = len(subject_codes)
@@ -102,8 +105,6 @@ def get_course_urls_selenium(subject_codes, term="1252"):
     return course_urls
 
 def get_course_details(course_urls):
-    # Path to your ChromeDriver
-    chrome_driver_path = "/Users/jeremiahgiordani/Documents/chromedriver-mac-x64/chromedriver"
     
     # Set up Chrome options
     options = Options()
