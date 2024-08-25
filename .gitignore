@@ -1,0 +1,12 @@
+# Ignore the api_key.py file
+api_key.py
+test_elasticsearch.py
+elastic_search_variables.py
+
+# General ignores
+*.pyc
+__pycache__/
+*.log
+*.env
+.env
+.DS_Store
