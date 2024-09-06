@@ -93,4 +93,4 @@ The chatbot is implemented as a Flask web application. It integrates with OpenAI
 
 ### Frontend:
 
-The web interface is served by the Flask app and is based on a template obtained from a public GitHub repository (username: wuup; [link](https://github.com/wuup/gpt4-chatbot)).
+The web interface is served by the Flask app and uses the HTML template obtained from a public GitHub repository (username: wuup; [link](https://github.com/wuup/gpt4-chatbot)).
